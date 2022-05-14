@@ -1,15 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Semana07UESAN.DOMAIN.Core.Entities;
+using Semana07UESAN.DOMAIN.Core.Interfaces;
 using Semana07UESAN.DOMAIN.Infrastructure.Data;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Semana07UESAN.DOMAIN.Infrastructure.Repositories
 {
-    public class CustomerRepository
+    public class CustomerRepository : ICustomerRepository
     {
         private readonly SalesContext _context;
 
@@ -32,8 +28,16 @@ namespace Semana07UESAN.DOMAIN.Infrastructure.Repositories
 
         public async Task<Customer> GetCustomerById(int id)
         {
-            //var data = new SalesContext();
-            return await _context.Customer.FirstOrDefaultAsync(c => c.Id == id);
+            //Validate if the customer exists
+            var customer = await _context.Customer.FindAsync(id);
+            if (customer == null)
+            {
+                throw new Exception("Customer not found");
+            }
+            return customer;
+
+
+            //return await _context.Customer.FirstOrDefaultAsync(c => c.Id == id);
         }
 
         public async Task Insert(Customer customer)
@@ -58,7 +62,7 @@ namespace Semana07UESAN.DOMAIN.Infrastructure.Repositories
                 return false;
             }
             _context.Customer.Remove(customer);
-            int countRows= await _context.SaveChangesAsync();
+            int countRows = await _context.SaveChangesAsync();
             return countRows > 0;
         }
 
