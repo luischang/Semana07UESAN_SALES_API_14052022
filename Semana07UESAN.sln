@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32328.378
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Semana07UESAN.API", "Semana07UESAN.API\Semana07UESAN.API.csproj", "{6401F23C-3FE1-4A26-A3C8-1C1B9FCA267A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Semana07UESAN.DOMAIN", "Semana07UESAN.DOMAIN\Semana07UESAN.DOMAIN.csproj", "{8D8BF5FF-2FFF-49B8-8D87-70D7619C3F4B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6401F23C-3FE1-4A26-A3C8-1C1B9FCA267A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6401F23C-3FE1-4A26-A3C8-1C1B9FCA267A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6401F23C-3FE1-4A26-A3C8-1C1B9FCA267A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6401F23C-3FE1-4A26-A3C8-1C1B9FCA267A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D8BF5FF-2FFF-49B8-8D87-70D7619C3F4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D8BF5FF-2FFF-49B8-8D87-70D7619C3F4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D8BF5FF-2FFF-49B8-8D87-70D7619C3F4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D8BF5FF-2FFF-49B8-8D87-70D7619C3F4B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A2AAC5AD-6FAB-4FB4-BA41-8E9FC51C33AA}
+	EndGlobalSection
+EndGlobal
