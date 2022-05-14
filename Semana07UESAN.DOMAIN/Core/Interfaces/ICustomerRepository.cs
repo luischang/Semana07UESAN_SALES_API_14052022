@@ -9,5 +9,6 @@ namespace Semana07UESAN.DOMAIN.Core.Interfaces
         Task<IEnumerable<Customer>> GetCustomers();
         Task Insert(Customer customer);
         Task<bool> Update(Customer customer);
+        IEnumerable<Customer> GetCustomersSP();
     }
 }

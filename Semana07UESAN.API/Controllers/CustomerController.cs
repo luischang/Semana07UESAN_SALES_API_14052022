@@ -22,6 +22,13 @@ namespace Semana07UESAN.API.Controllers
             return Ok(customers);
         }
 
+        [HttpGet("GetAllSP")]
+        public IActionResult GetAllSP()
+        {
+            var customers = _customerRepository.GetCustomersSP();
+            return Ok(customers);
+        }
+
         [HttpGet("GetById/{id}")]
         public async Task<IActionResult> GetById(int id)
         {

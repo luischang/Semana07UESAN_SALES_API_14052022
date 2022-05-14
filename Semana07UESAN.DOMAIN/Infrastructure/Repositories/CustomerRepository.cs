@@ -20,6 +20,11 @@ namespace Semana07UESAN.DOMAIN.Infrastructure.Repositories
         //    return data.Customer.ToList();
         //}
 
+        public IEnumerable<Customer> GetCustomersSP()
+        {
+            return  _context.Customer.FromSqlInterpolated($"EXECUTE dbo.SP_GET_CUSTOMERS").ToList();
+        }
+
         public async Task<IEnumerable<Customer>> GetCustomers()
         {
             //var data = new SalesContext();
