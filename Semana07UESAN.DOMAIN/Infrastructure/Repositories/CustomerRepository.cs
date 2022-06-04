@@ -34,7 +34,10 @@ namespace Semana07UESAN.DOMAIN.Infrastructure.Repositories
         public async Task<Customer> GetCustomerById(int id)
         {
             //Validate if the customer exists
-            var customer = await _context.Customer.FindAsync(id); 
+            var customer = await _context.Customer.FindAsync(id);
+            //Validate is null
+            if (customer == null)
+                return null;
             return customer;
             //return await _context.Customer.FirstOrDefaultAsync(c => c.Id == id);
         }
