@@ -35,13 +35,7 @@ namespace Semana07UESAN.DOMAIN.Infrastructure.Repositories
         {
             //Validate if the customer exists
             var customer = await _context.Customer.FindAsync(id);
-            if (customer == null)
-            {
-                throw new Exception("Customer not found");
-            }
             return customer;
-
-
             //return await _context.Customer.FirstOrDefaultAsync(c => c.Id == id);
         }
 
