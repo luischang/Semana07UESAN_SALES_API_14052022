@@ -78,7 +78,7 @@ namespace Semana07UESAN.API.Controllers
             return Ok(customer.Id);
         }
 
-        [HttpPost("Update")]
+        [HttpPut("Update")]
         public async Task<IActionResult> Update([FromBody] CustomerDTO customerDTO)
         {
             if (customerDTO.Id == 0)
